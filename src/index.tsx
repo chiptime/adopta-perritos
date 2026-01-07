@@ -5,111 +5,121 @@ import { Heart, Search, Filter, MapPin, ChevronLeft, Info, Share2, Phone, Mail, 
 const dogs = [
   {
     id: 1,
-    name: "Melody",
+    name: "Khan",
     breed: "Podenco Mix",
     age: "2 años",
-    gender: "Hembra",
+    gender: "Macho",
     size: "Mediano",
     location: "Madrid",
-    img: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&q=80&w=1200",
+    img: "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767532266640-150x150.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1633502808013-39f1c7d678d7?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1596707449079-661266c1f7a0?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1553882951-9c3dab4a50cb?auto=format&fit=crop&q=80&w=800"
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767532271996-150x150.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767532269107-150x150.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767532276585-150x150.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767532273803-150x150.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767532280795-150x150.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767532278679-150x150.jpg"
     ],
-    tags: ["Sociable", "Activa", "Cariñosa"],
-    description: "Melody es una perrita llena de vida. Fue rescatada de una situación difícil pero no ha perdido la fe en los humanos. Le encanta correr por el campo y jugar con otros perros. Busca una familia activa que la lleve de aventuras.",
-    health: ["Vacunada", "Esterilizada", "Chip", "Desparasitada"]
+    tags: ["Sociable", "Activo", "Cariñoso"],
+    description: "Khan es un perrito lleno de vida. Fue rescatado de una situación difícil pero no ha perdido la fe en los humanos. Le encanta correr por el campo y jugar con otros perros. Busca una familia activa que la lleve de aventuras.",
+    health: ["Vacunado", "Esterilizado", "Chip", "Desparasitado"]
   },
   {
     id: 2,
-    name: "Bruno",
+    name: "Pelé",
     breed: "Mestizo",
-    age: "5 meses",
+    age: "2 años",
     gender: "Macho",
-    size: "Pequeño (crecerá)",
-    location: "Madrid",
-    img: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=1200",
+    size: "Grande",
+    location: "Collado Mediano, Madrid",
+    img: "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767531970128.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1588022274152-8d76e33db383?auto=format&fit=crop&q=80&w=800"
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767531968038.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767531972313.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767531974469.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2026/01/FB_IMG_1767531976739.jpg"
     ],
-    tags: ["Cachorro", "Juguetón", "Ideal pisos"],
-    description: "Bruno es un cachorro adorable que está descubriendo el mundo. Es un poco tímido al principio, pero en cuanto coge confianza es puro amor. Ideal para una familia con paciencia para educar a un cachorro.",
-    health: ["Vacunada (1a dosis)", "Chip", "Desparasitada"]
+    tags: ["Sociable", "Cariñoso", "Obediente", "Noble"],
+    description: "Pelé es un guapo jovencito que sigue esperando con ilusión encontrar una familia con la que ser muy feliz. Ya lleva un tiempo en la prote y empieza a notarse el estrés. Es un perro lleno de energía y vitalidad. Con tan solo dos años, tiene todo el entusiasmo por vivir al máximo. Con las personas es súper cariñoso, obediente y noble. Le encantan las caricias, las chuches y jugar con la pelota. Agradece muchísimo la compañía, sobre todo ahora que se siente solo. Es sociable con otros perros cuando se hacen las presentaciones adecuadas. Disfruta de las carreras, los juegos y las siestas al sol.",
+    health: ["Vacunado", "Desparasitado", "Castrado", "Microchip", "Vacuna tos de las perreras"]
   },
   {
     id: 3,
-    name: "Luna",
+    name: "Perales",
     breed: "Galgo",
-    age: "3 años",
-    gender: "Hembra",
+    age: "Senior",
+    gender: "Macho",
     size: "Grande",
-    location: "Toledo",
-    img: "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&q=80&w=1200",
+    location: "Madrid",
+    img: "https://www.lahuelladewonder.es/wp-content/uploads/2025/12/FB_IMG_1767533081535.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1617267443187-5781a707127b?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1529927066849-79b791a69825?auto=format&fit=crop&q=80&w=800"
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/12/FB_IMG_1767533068519.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/12/FB_IMG_1767533071629.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/12/FB_IMG_1767533077264.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/12/FB_IMG_1767533074119.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/12/FB_IMG_1767533079076.jpg"
     ],
-    tags: ["Tranquila", "Sofá lover", "Noble"],
-    description: "Luna hace honor a la fama de los galgos: es una estatua de tranquilidad en casa. Le encanta dormir en el sofá y recibir caricias suaves. Pasea perfectamente con correa y se lleva bien con gatos.",
-    health: ["Vacunada", "Esterilizada", "Chip", "Test Leishmania Negativo"]
+    tags: ["Senior", "Invisible", "Paciencia"],
+    description: "Perales es un galgo senior que busca un hogar tranquilo donde pasar sus años dorados. Es un perro 'invisible' que ha pasado inadvertido por mucho tiempo, pero tiene un corazón enorme esperando ser descubierto. Necesita una familia que entienda su timidez inicial y le dé el espacio y el amor que merece.",
+    health: ["Vacunado", "Desparasitado", "Chip", "Castrado"]
   },
   {
     id: 4,
-    name: "Rocky",
-    breed: "Boxer Mix",
-    age: "4 años",
+    name: "Portos",
+    breed: "Mestizo",
+    age: "9 años",
     gender: "Macho",
-    size: "Mediano/Grande",
-    location: "Madrid",
-    img: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=1200",
+    size: "Grande (+30kg)",
+    location: "Collado Mediano, Madrid",
+    img: "https://www.lahuelladewonder.es/wp-content/uploads/2024/03/portos-adoptar-perro-adopcion-en-MADRID-protectora-huella-wonder.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1555661330-90ac02629076?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1505628346881-b72e278045d4?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1510771463146-e89e6e86560e?auto=format&fit=crop&q=80&w=800"
+      "https://www.lahuelladewonder.es/wp-content/uploads/2024/03/portos-adoptar-perrittos-adopcion-MADRID-protectora-huella-wonder.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2023/08/FB_IMG_1710947678531.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2023/08/FB_IMG_1710947675964.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2023/08/FB_IMG_1710947670561.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2023/08/FB_IMG_1710947668165.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2023/08/FB_IMG_1710947665803.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2023/08/FB_IMG_1710947673561.jpg"
     ],
-    tags: ["Protector", "Fiel", "Energía Alta"],
-    description: "Rocky es pura potencia y corazón. Necesita alguien con experiencia en perros fuertes, pero es un pedazo de pan con las personas. Le encantan los juegos de olfato.",
-    health: ["Vacunada", "Castrado", "Chip"]
+    tags: ["Sensible", "Noble", "Veterano"],
+    description: "Portos es uno de nuestros abuelos más veteranos. Lleva 9 años esperando… nueve años viendo cómo otros se van a casa mientras él se queda atrás. Y aun así, sigue siendo un perro sensible, noble y lleno de amor. Es tranquilo, cariñoso y muy bueno. Solo quiere compañía, cariño y sentir que por fin es importante para alguien.",
+    health: ["Vacunado", "Testado", "Desparasitado", "Castrado", "Chip"]
   },
   {
     id: 5,
-    name: "Coco",
-    breed: "Teckel",
-    age: "1 año",
+    name: "Kiko",
+    breed: "Mestizo",
+    age: "10 años",
     gender: "Macho",
-    size: "Pequeño",
-    location: "Segovia",
-    img: "https://images.unsplash.com/photo-1612144431180-2d67277955dd?auto=format&fit=crop&q=80&w=1200",
+    size: "Mediano (14kg)",
+    location: "Collado Mediano, Madrid",
+    img: "https://www.lahuelladewonder.es/wp-content/uploads/2025/10/FB_IMG_1761596438009.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1659957380962-d9657c65363e?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1628109403166-4c7497d3969e?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1520087619250-584c0dd35130?auto=format&fit=crop&q=80&w=800"
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/10/FB_IMG_1761596440511.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/10/FB_IMG_1761596442878.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/10/FB_IMG_1761596445648.jpg"
     ],
-    tags: ["Simpático", "Curioso", "Familiar"],
-    description: "Coco es un pequeño explorador. No para quieto y le encanta investigar cada rincón del parque. Se lleva genial con niños y es el alma de la fiesta.",
-    health: ["Vacunada", "Castrado", "Chip"]
+    tags: ["Simpático", "Tranquilo", "Dormilón"],
+    description: "Kiko fue rescatado de una vida muy triste: encadenado día y noche, solo, sin atención ni cariño. La alegría al verlas fue lo que más nos llenó el corazón… ¡sabía que venían a salvarlo! Es un abuelete simpático, tranquilo, dormilón y agradecido, que disfruta con los paseos y la compañía humana. Kiko merece pasar el resto de su vida rodeado de amor.",
+    health: ["Vacunado", "Desparasitado", "Chip", "Castrado", "Negativo Leishmania"]
   },
   {
     id: 6,
-    name: "Nala",
-    breed: "Pastor Alemán",
-    age: "6 años",
-    gender: "Hembra",
-    size: "Grande",
-    location: "Madrid",
-    img: "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?auto=format&fit=crop&q=80&w=1200",
+    name: "Chulo",
+    breed: "Mestizo",
+    age: "8 años",
+    gender: "Macho",
+    size: "Grande (30kg)",
+    location: "Collado Mediano, Madrid",
+    img: "https://www.lahuelladewonder.es/wp-content/uploads/2025/06/FB_IMG_1761068770800.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1612536050360-1e59265f2a1b?auto=format&fit=crop&q=80&w=800"
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/06/FB_IMG_1761068773011.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/06/FB_IMG_1761068775355.jpg",
+      "https://www.lahuelladewonder.es/wp-content/uploads/2025/06/FB_IMG_1761068777980.jpg"
     ],
-    tags: ["Inteligente", "Leal", "Obediente"],
-    description: "Nala es una perra 10. Conoce todas las órdenes básicas, pasea sin tirar y es muy equilibrada. Su dueño falleció y busca una segunda oportunidad para demostrar su lealtad infinita.",
-    health: ["Vacunada", "Esterilizada", "Chip"]
+    tags: ["Noble", "Tranquilo", "Tímido"],
+    description: "Chulo llegó desde la perrera de Baza (Granada) junto a su hermano, después de pasar por momentos muy duros. Es un perro muy noble y tranquilo, tímido al principio, pero cuando recibe cariño se ilumina de felicidad. 🥰 Es un abuelito bueno, que solo quiere rutinas, tranquilidad y alguien que lo abrace sin miedo.",
+    health: ["Vacunado", "Desparasitado", "Chip", "Castrado"]
   }
 ];
 
@@ -206,7 +216,7 @@ const LandingView = ({ onSelectDog }: { onSelectDog: (dog: any) => void }) => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
           <Badge variant="primary">50+ peludos esperando un hogar</Badge>
           <h1 className="mt-8 text-5xl md:text-7xl font-bold tracking-tight text-zinc-900">
-            Encuentra a tu <br/>
+            Encuentra a tu <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               compañero de vida
             </span>
@@ -228,10 +238,10 @@ const LandingView = ({ onSelectDog }: { onSelectDog: (dog: any) => void }) => {
             </div>
             <div className="h-12 w-px bg-zinc-200 hidden md:block mx-2"></div>
             <div className="flex gap-2">
-                <button className="h-12 px-6 flex items-center gap-2 text-zinc-600 hover:bg-zinc-50 rounded-2xl font-medium transition-colors">
-                    <Filter size={18} /> Filtros
-                </button>
-                <Button variant="primary" className="!h-12 !px-8 !rounded-2xl">Buscar</Button>
+              <button className="h-12 px-6 flex items-center gap-2 text-zinc-600 hover:bg-zinc-50 rounded-2xl font-medium transition-colors">
+                <Filter size={18} /> Filtros
+              </button>
+              <Button variant="primary" className="!h-12 !px-8 !rounded-2xl">Buscar</Button>
             </div>
           </div>
         </div>
@@ -266,11 +276,11 @@ const LandingView = ({ onSelectDog }: { onSelectDog: (dog: any) => void }) => {
                   <Heart size={20} />
                 </div>
                 <div className="absolute bottom-4 left-4 flex gap-2">
-                    {dog.tags.slice(0, 2).map((tag, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-black/50 backdrop-blur-md text-white text-xs font-medium rounded-full border border-white/10">
-                            {tag}
-                        </span>
-                    ))}
+                  {dog.tags.slice(0, 2).map((tag, idx) => (
+                    <span key={idx} className="px-3 py-1 bg-black/50 backdrop-blur-md text-white text-xs font-medium rounded-full border border-white/10">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
 
@@ -369,20 +379,20 @@ const DetailView = ({ dog, onBack }: { dog: any, onBack: () => void }) => {
               {/* Quick Stats Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="p-4 rounded-2xl bg-purple-50 border border-purple-100 text-center">
-                    <p className="text-purple-400 text-xs font-bold uppercase tracking-wider mb-1">Raza</p>
-                    <p className="text-purple-900 font-semibold">{dog.breed}</p>
+                  <p className="text-purple-400 text-xs font-bold uppercase tracking-wider mb-1">Raza</p>
+                  <p className="text-purple-900 font-semibold">{dog.breed}</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-orange-50 border border-orange-100 text-center">
-                    <p className="text-orange-400 text-xs font-bold uppercase tracking-wider mb-1">Edad</p>
-                    <p className="text-orange-900 font-semibold">{dog.age}</p>
+                  <p className="text-orange-400 text-xs font-bold uppercase tracking-wider mb-1">Edad</p>
+                  <p className="text-orange-900 font-semibold">{dog.age}</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-center">
-                    <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Tamaño</p>
-                    <p className="text-blue-900 font-semibold">{dog.size}</p>
+                  <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Tamaño</p>
+                  <p className="text-blue-900 font-semibold">{dog.size}</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-green-50 border border-green-100 text-center">
-                    <p className="text-green-400 text-xs font-bold uppercase tracking-wider mb-1">Salud</p>
-                    <p className="text-green-900 font-semibold">Revisado</p>
+                  <p className="text-green-400 text-xs font-bold uppercase tracking-wider mb-1">Salud</p>
+                  <p className="text-green-900 font-semibold">Revisado</p>
                 </div>
               </div>
 
@@ -394,7 +404,7 @@ const DetailView = ({ dog, onBack }: { dog: any, onBack: () => void }) => {
                 </h3>
                 <p className="text-zinc-600 text-lg leading-relaxed whitespace-pre-line">
                   {dog.description}
-                  <br/><br/>
+                  <br /><br />
                   Es un perro que necesita tiempo para adaptarse, pero una vez lo hace, es inseparable. Buscamos una familia que entienda sus necesidades y le dé el amor que se merece.
                 </p>
               </div>
@@ -409,13 +419,13 @@ const DetailView = ({ dog, onBack }: { dog: any, onBack: () => void }) => {
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {/* Main image thumbnail */}
                     <div
-                        className={`aspect-square rounded-2xl overflow-hidden cursor-pointer border-2 ${activeImg === dog.img ? 'border-purple-600' : 'border-transparent'}`}
-                        onClick={() => setActiveImg(dog.img)}
+                      className={`aspect-square rounded-2xl overflow-hidden cursor-pointer border-2 ${activeImg === dog.img ? 'border-purple-600' : 'border-transparent'}`}
+                      onClick={() => setActiveImg(dog.img)}
                     >
                       <img src={dog.img} alt="Main" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
                     </div>
                     {/* Gallery images */}
-                    {dog.gallery.map((imgUrl, idx) => (
+                    {dog.gallery.map((imgUrl: string, idx: number) => (
                       <div
                         key={idx}
                         className={`aspect-square rounded-2xl overflow-hidden cursor-pointer border-2 ${activeImg === imgUrl ? 'border-purple-600' : 'border-transparent'}`}
@@ -432,7 +442,7 @@ const DetailView = ({ dog, onBack }: { dog: any, onBack: () => void }) => {
               <div>
                 <h3 className="text-lg font-bold text-zinc-900 mb-4">Personalidad</h3>
                 <div className="flex flex-wrap gap-2">
-                  {dog.tags.map((tag, idx) => (
+                  {dog.tags.map((tag: string, idx: number) => (
                     <span key={idx} className="px-4 py-2 rounded-xl bg-zinc-100 text-zinc-600 font-medium border border-zinc-200">
                       {tag}
                     </span>
@@ -444,7 +454,7 @@ const DetailView = ({ dog, onBack }: { dog: any, onBack: () => void }) => {
               <div className="bg-zinc-50 rounded-2xl p-6 border border-zinc-200">
                 <h3 className="text-lg font-bold text-zinc-900 mb-4">Estado Veterinario</h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {dog.health.map((item, idx) => (
+                  {dog.health.map((item: string, idx: number) => (
                     <li key={idx} className="flex items-center gap-2 text-zinc-600">
                       <CheckCircle size={18} className="text-green-500" />
                       {item}
@@ -473,26 +483,26 @@ const DetailView = ({ dog, onBack }: { dog: any, onBack: () => void }) => {
 
                   <div className="mt-6 pt-6 border-t border-zinc-100">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
-                            <PawPrint size={20} />
-                        </div>
-                        <div>
-                            <p className="text-sm font-bold text-zinc-900">La Huella feliz</p>
-                            <p className="text-xs text-zinc-500">Madrid, España</p>
-                        </div>
+                      <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                        <PawPrint size={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-zinc-900">La Huella feliz</p>
+                        <p className="text-xs text-zinc-500">Madrid, España</p>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-purple-600 p-6 rounded-3xl shadow-xl shadow-purple-900/20 text-white relative overflow-hidden">
-                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 blur-xl"></div>
-                   <h3 className="text-lg font-bold mb-2 relative z-10">Apadrina a {dog.name}</h3>
-                   <p className="text-purple-100 text-sm mb-4 relative z-10">
-                     Si no puedes adoptar, ayúdanos con sus gastos veterinarios y alimentación.
-                   </p>
-                   <button className="w-full py-3 bg-white text-purple-700 font-bold rounded-xl hover:bg-purple-50 transition-colors relative z-10">
-                     Apadrinar ahora
-                   </button>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 blur-xl"></div>
+                  <h3 className="text-lg font-bold mb-2 relative z-10">Apadrina a {dog.name}</h3>
+                  <p className="text-purple-100 text-sm mb-4 relative z-10">
+                    Si no puedes adoptar, ayúdanos con sus gastos veterinarios y alimentación.
+                  </p>
+                  <button className="w-full py-3 bg-white text-purple-700 font-bold rounded-xl hover:bg-purple-50 transition-colors relative z-10">
+                    Apadrinar ahora
+                  </button>
                 </div>
               </div>
             </div>
