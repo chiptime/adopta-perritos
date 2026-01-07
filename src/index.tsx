@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { HashRouter, Routes, Route, useNavigate, useParams } from 'react-router-dom';
 import { Heart, Search, Filter, MapPin, ChevronLeft, Info, Share2, Phone, Mail, CheckCircle, PawPrint, Menu, X, Camera } from 'lucide-react';
 
 // --- MOCK DATA ---
@@ -73,7 +74,6 @@ const dogs = [
     location: "Collado Mediano, Madrid",
     img: "https://www.lahuelladewonder.es/wp-content/uploads/2024/03/portos-adoptar-perro-adopcion-en-MADRID-protectora-huella-wonder.jpg",
     gallery: [
-      "https://www.lahuelladewonder.es/wp-content/uploads/2024/03/portos-adoptar-perrittos-adopcion-MADRID-protectora-huella-wonder.jpg",
       "https://www.lahuelladewonder.es/wp-content/uploads/2023/08/FB_IMG_1710947678531.jpg",
       "https://www.lahuelladewonder.es/wp-content/uploads/2023/08/FB_IMG_1710947675964.jpg",
       "https://www.lahuelladewonder.es/wp-content/uploads/2023/08/FB_IMG_1710947670561.jpg",
@@ -159,14 +159,18 @@ const Button = ({ children, variant = "primary", className = "", icon: Icon, onC
   );
 };
 
-const Navbar = ({ onViewChange }: { onViewChange: (view: string) => void }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="sticky top-0 z-50 w-full backdrop-blur-lg bg-white/80 border-b border-zinc-200/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => onViewChange('home')}>
+          <div className="flex items-center gap-2 cursor-pointer" onClick={() => {
+            navigate('/');
+            window.scrollTo(0, 0);
+          }}>
             <div className="bg-purple-600 p-2 rounded-xl text-white">
               <PawPrint size={24} />
             </div>
@@ -176,7 +180,10 @@ const Navbar = ({ onViewChange }: { onViewChange: (view: string) => void }) => {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => onViewChange('home')} className="text-zinc-600 hover:text-purple-600 font-medium transition-colors">Inicio</button>
+            <button onClick={() => {
+              navigate('/');
+              window.scrollTo(0, 0);
+            }} className="text-zinc-600 hover:text-purple-600 font-medium transition-colors">Inicio</button>
             <button className="text-zinc-600 hover:text-purple-600 font-medium transition-colors">Adopta</button>
             <button className="text-zinc-600 hover:text-purple-600 font-medium transition-colors">Cómo ayudar</button>
             <button className="text-zinc-600 hover:text-purple-600 font-medium transition-colors">Blog</button>
@@ -194,7 +201,11 @@ const Navbar = ({ onViewChange }: { onViewChange: (view: string) => void }) => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-zinc-100 p-4 space-y-4">
-          <button onClick={() => onViewChange('home')} className="block w-full text-left p-2 text-zinc-600 font-medium">Inicio</button>
+          <button onClick={() => {
+            navigate('/');
+            setIsOpen(false);
+            window.scrollTo(0, 0);
+          }} className="block w-full text-left p-2 text-zinc-600 font-medium">Inicio</button>
           <button className="block w-full text-left p-2 text-zinc-600 font-medium">Adopta</button>
           <button className="block w-full text-left p-2 text-zinc-600 font-medium">Donar</button>
         </div>
@@ -205,7 +216,8 @@ const Navbar = ({ onViewChange }: { onViewChange: (view: string) => void }) => {
 
 // --- VIEWS ---
 
-const LandingView = ({ onSelectDog }: { onSelectDog: (dog: any) => void }) => {
+const LandingView = () => {
+  const navigate = useNavigate();
   return (
     <div className="animate-in fade-in duration-500">
       {/* Hero Section */}
@@ -264,7 +276,7 @@ const LandingView = ({ onSelectDog }: { onSelectDog: (dog: any) => void }) => {
             <div
               key={dog.id}
               className="group bg-white rounded-3xl border border-zinc-100 overflow-hidden hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 cursor-pointer"
-              onClick={() => onSelectDog(dog)}
+              onClick={() => navigate(`/perro/${dog.id}`)}
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
@@ -313,13 +325,27 @@ const LandingView = ({ onSelectDog }: { onSelectDog: (dog: any) => void }) => {
   );
 };
 
-const DetailView = ({ dog, onBack }: { dog: any, onBack: () => void }) => {
-  const [activeImg, setActiveImg] = useState(dog.img);
+const DetailView = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const dog = dogs.find(d => d.id === Number(id));
+  const [activeImg, setActiveImg] = useState(dog?.img || '');
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setActiveImg(dog.img);
+    if (dog) {
+      setActiveImg(dog.img);
+    }
   }, [dog]);
+
+  if (!dog) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center p-4">
+        <h2 className="text-2xl font-bold text-zinc-900 mb-4">Perro no encontrado</h2>
+        <Button onClick={() => navigate('/')}>Volver al inicio</Button>
+      </div>
+    );
+  }
 
   return (
     <div className="animate-in slide-in-from-bottom-8 duration-500 min-h-screen bg-zinc-50 pb-20">
@@ -330,7 +356,7 @@ const DetailView = ({ dog, onBack }: { dog: any, onBack: () => void }) => {
 
         <div className="absolute top-24 left-4 md:left-8">
           <button
-            onClick={onBack}
+            onClick={() => navigate('/')}
             className="flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 text-white rounded-xl hover:bg-white/30 transition-colors"
           >
             <ChevronLeft size={20} /> Volver
@@ -517,38 +543,25 @@ const DetailView = ({ dog, onBack }: { dog: any, onBack: () => void }) => {
 // --- MAIN APP COMPONENT ---
 
 const App = () => {
-  const [view, setView] = useState('home'); // 'home' or 'detail'
-  const [selectedDog, setSelectedDog] = useState(null);
-
-  const handleSelectDog = (dog: any) => {
-    setSelectedDog(dog);
-    setView('detail');
-  };
-
-  const handleBack = () => {
-    setView('home');
-    setSelectedDog(null);
-  };
-
   return (
-    <div className="min-h-screen font-sans bg-zinc-50 text-zinc-900 selection:bg-purple-100 selection:text-purple-900">
-      <Navbar onViewChange={(v) => {
-        if (v === 'home') handleBack();
-      }} />
+    <HashRouter>
+      <div className="min-h-screen font-sans bg-zinc-50 text-zinc-900 selection:bg-purple-100 selection:text-purple-900">
+        <Navbar />
 
-      {view === 'home' ? (
-        <LandingView onSelectDog={handleSelectDog} />
-      ) : (
-        selectedDog && <DetailView dog={selectedDog} onBack={handleBack} />
-      )}
+        <Routes>
+          <Route path="/" element={<LandingView />} />
+          <Route path="/perro/:id" element={<DetailView />} />
+          <Route path="*" element={<LandingView />} />
+        </Routes>
 
-      {/* Footer Simple */}
-      <footer className="bg-white border-t border-zinc-200 py-12 mt-auto">
-        <div className="max-w-7xl mx-auto px-4 text-center text-zinc-400 text-sm">
-          <p>© 2024 HuellaFeliz. Diseño estilo HeroUI generado para demostración.</p>
-        </div>
-      </footer>
-    </div>
+        {/* Footer Simple */}
+        <footer className="bg-white border-t border-zinc-200 py-12 mt-auto">
+          <div className="max-w-7xl mx-auto px-4 text-center text-zinc-400 text-sm">
+            <p>© 2025 HuellaFeliz.</p>
+          </div>
+        </footer>
+      </div>
+    </HashRouter>
   );
 };
 
