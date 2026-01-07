@@ -227,7 +227,7 @@ const LandingView = () => {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
           <Badge variant="primary">50+ peludos esperando un hogar</Badge>
-          <h1 className="mt-8 text-5xl md:text-7xl font-bold tracking-tight text-zinc-900">
+          <h1 className="mt-8 text-4xl md:text-7xl font-bold tracking-tight text-zinc-900 leading-tight">
             Encuentra a tu <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
               compañero de vida
@@ -350,7 +350,7 @@ const DetailView = () => {
   return (
     <div className="animate-in slide-in-from-bottom-8 duration-500 min-h-screen bg-zinc-50 pb-20">
       {/* Header Image */}
-      <div className="relative h-[50vh] lg:h-[60vh] w-full bg-zinc-900">
+      <div className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] w-full bg-zinc-900">
         <img src={activeImg} alt={dog.name} className="w-full h-full object-cover opacity-90 transition-all duration-500" />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent"></div>
 
@@ -365,7 +365,7 @@ const DetailView = () => {
       </div>
 
       {/* Content Container - Overlapping the image like a card */}
-      <div className="relative max-w-5xl mx-auto -mt-32 px-4 sm:px-6">
+      <div className="relative max-w-5xl mx-auto -mt-20 md:-mt-32 px-4 sm:px-6">
         <div className="bg-white rounded-[2.5rem] shadow-2xl shadow-zinc-200 border border-zinc-100 p-6 md:p-12">
 
           {/* Main Info Header */}
